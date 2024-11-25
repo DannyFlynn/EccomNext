@@ -52,7 +52,7 @@ export default function Home() {
   // };
 
   return (
-    <div className="w-full lg:h-screen lg:overflow-hidden relative">
+    <div className="w-full lg:h-screen lg:overflow-hidden overflow-x-hidden relative">
       <div className="w-full h-full flex flex-col items-center">
         <NavigationContainer />
         <div className="w-full h-[85%] flex flex-col">

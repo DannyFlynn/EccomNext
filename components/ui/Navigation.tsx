@@ -30,7 +30,7 @@ const Navigation = ({ menuOpen, toggleMenu }: NavigationProps) => {
         </div>
       </div>
       {/* small devices up intil desktops underneath nav*/}
-      <div className="absolute right-0 top-0 flex flex-col">
+      <div className="absolute right-0 top-0 flex flex-col lg:hidden">
         <button onClick={toggleMenu}>
           <span
             className={`absolute z-40 top-2 right-3  transition-transform ease-in-out duration-700 ${
