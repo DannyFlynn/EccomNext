@@ -1,10 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { IoPerson } from "react-icons/io5";
-import { FaHeart, FaShoppingBasket } from "react-icons/fa";
-import { IoMdMenu } from "react-icons/io";
-import { ImCross } from "react-icons/im";
 import { useState, useEffect } from "react";
 import MobileNavMenu from "../MobileNavMenu";
 import Navigation from "../Navigation";

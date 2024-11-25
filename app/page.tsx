@@ -1,20 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Navigation from "@/components/ui/Navigation";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { FaSearch } from "react-icons/fa"; //https://react-icons.github.io/react-icons
-import MobileNavMenu from "@/components/ui/MobileNavMenu";
 import NavigationContainer from "@/components/ui/pagenavigation/NavigationContainer";
 
 type Item = {
@@ -27,12 +19,12 @@ type Item = {
 
 export default function Home() {
   const [items, setItems] = useState<Item>([]);
-  const [info, setInfo] = useState<{ [key: number]: boolean }>({});
-  const [cardColors, setCardColors] = useState([
+  //const [info, setInfo] = useState<{ [key: number]: boolean }>({});
+  const cardColors  = [
     "bg-red-200",
     "bg-gray-300",
     "bg-indigo-200",
-  ]);
+  ];
 
   //https://dummyjson.com/products/category/beauty
   //https://dummyjson.com/products?limit=3
@@ -45,19 +37,19 @@ export default function Home() {
       });
   }, []);
 
-  const handleMouseEnter = (id: number) => {
-    setInfo((prev) => ({
-      ...prev,
-      [id]: true,
-    }));
-  };
+  // const handleMouseEnter = (id: number) => {
+  //   setInfo((prev) => ({
+  //     ...prev,
+  //     [id]: true,
+  //   }));
+  // };
 
-  const handleMouseLeave = (id: number) => {
-    setInfo((prev) => ({
-      ...prev,
-      [id]: false,
-    }));
-  };
+  // const handleMouseLeave = (id: number) => {
+  //   setInfo((prev) => ({
+  //     ...prev,
+  //     [id]: false,
+  //   }));
+  // };
 
   return (
     <div className="w-full lg:h-screen lg:overflow-hidden relative">
