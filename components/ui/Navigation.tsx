@@ -33,11 +33,11 @@ const Navigation = ({ menuOpen, toggleMenu }: NavigationProps) => {
       <div className="absolute right-0 top-0 flex flex-col lg:hidden">
         <button onClick={toggleMenu}>
           <span
-            className={`absolute z-40 top-2 right-3  transition-transform ease-in-out duration-700 ${
+            className={`absolute z-50 top-2 right-3  transition-transform ease-in-out duration-700 ${
               menuOpen ? "rotate-180" : "-rotate-180"
             }`}
           >
-            {menuOpen ? <ImCross size={38} /> : <IoMdMenu size={42} />}
+            {menuOpen ? <ImCross size={38}  /> : <IoMdMenu size={42} />}
           </span>
         </button>
       </div>

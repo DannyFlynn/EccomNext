@@ -5,11 +5,23 @@ type MobileNavMenuProps = {
 const MobileNavMenu = ({ menuOpen }: MobileNavMenuProps) => {
   return (
       <div
-        className={` bg-black bg-opacity-30 text-white w-full h-screen flex flex-col lg:hidden absolute z-30 transition-transform ease-in-out duration-700 ${
+        className={` text-white w-full h-screen flex  lg:hidden absolute z-40 transition-transform ease-in-out duration-700 ${
           menuOpen ? "translate-x-0" : "translate-x-[100%]"
         }`}
       >
-        hello I should not appear
+        <div className="bg-white w-1/3 h-screen"></div>
+        <div className="bg-indigo-200 w-2/3 h-screen">
+        <div className="h-full flex flex-col items-center">
+          <div className="mt-32">
+            <p className="text-xl font-bold underline">Woman</p></div>
+          <div className="my-32">
+          <p className="text-xl font-bold underline">Men</p>
+          </div>
+          <div className="">
+          <p className="text-xl font-bold underline">Kids</p>
+          </div>
+        </div>
+        </div>
       </div>
   );
 };
