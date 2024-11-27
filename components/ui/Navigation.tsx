@@ -25,9 +25,9 @@ const Navigation = ({ menuOpen, toggleMenu }: NavigationProps) => {
       </div>
       <div className="hidden  lg:w-1/4  p-3 text-right lg:flex flex-row-reverse">
         <div className="hidden w-full lg:flex   justify-end">
-          <IoPerson className="mx-6 cursor-pointer" size={30} />{" "}
-          <FaHeart size={30} className="mx-6 cursor-pointer" />{" "}
-          <FaShoppingBasket size={30} className="mx-6 cursor-pointer" />
+          <IoPerson className="mx-6 cursor-pointer" size={42} />{" "}
+          <FaHeart size={42} className="mx-6 cursor-pointer" />{" "}
+          <FaShoppingBasket size={42} className="mx-6 cursor-pointer" />
         </div>
       </div>
       <div className="flex lg:hidden w-3/4 justify-end pt-3 mr-16 mt-1">

@@ -59,7 +59,7 @@ const FirstPageProuducts = () => {
           alt={item.title}
           className="ml-10"
         />
-        <h2 className={`absolute  text-white top-1/2 text-4xl  font-bold text-shadow transition-all duration-500 ${bigText === item.id ? "lg:text-5xl" : "lg:text-3xl"}`}>
+        <h2 className={`absolute  text-white top-1/2 text-3xl  font-bold text-shadow transition-all duration-500 ${bigText === item.id ? "lg:text-5xl" : "lg:text-3xl"}`}>
           {item.brand}
         </h2>
       </CardContent>
