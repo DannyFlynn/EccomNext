@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import { FaFacebook, FaInstagram, FaGithub  } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
 import { FaSearch } from "react-icons/fa"; //https://react-icons.github.io/react-icons
@@ -7,13 +6,6 @@ import NavigationContainer from "@/components/ui/pagenavigation/NavigationContai
 import ProductsContainer from "@/components/products/ProductsContainer";
 import FirstPageProuducts from "@/components/products/FirstPageProuducts";
 
-type Item = {
-  title: string;
-  id: number;
-  thumbnail: string;
-  description: string;
-  brand: string;
-}[];
 
 export default function Home() {
 
