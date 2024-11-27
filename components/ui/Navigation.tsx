@@ -12,7 +12,7 @@ type NavigationProps = {
 
 const Navigation = ({ menuOpen, toggleMenu }: NavigationProps) => {
   return (
-    <nav className="w-full h-20 bg-indigo-200 lg:h-[15%] flex border-b relative">
+    <nav className="w-full h-20 bg-indigo-200 lg:h-[15vh] flex border-b relative">
       <div className="hidden lg:block w-1/4  p-3">
         <div className="hidden lg:w-2/3 lg:flex justify-around text-2xl">
           <Link href="/" >Woman</Link>
