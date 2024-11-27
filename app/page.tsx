@@ -81,7 +81,7 @@ export default function Home() {
                     alt={item.title}
                     className="ml-10"
                   />
-                  <h2 className="absolute z-30 text-white top-1/2 text-4xl font-bold">
+                  <h2 className="absolute z-30 text-white top-1/2 text-4xl font-bold text-shadow">
                     {item.brand}
                   </h2>
                 </CardContent>
@@ -89,11 +89,11 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <footer className="w-full h-20  block lg:hidden border-t">
+        <footer className="w-full h-20  block lg:hidden border-t bg-indigo-200 text-white">
           I am mob FOOT
         </footer>
       </div>
-      <footer className="w-full h-[15%] absolute bottom-0  hidden lg:block border-t">
+      <footer className="w-full h-[15%] absolute bottom-0  hidden lg:block border-t bg-indigo-200 text-white">
         I am web FOOT
       </footer>
     </div>
