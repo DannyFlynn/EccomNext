@@ -1,5 +1,4 @@
 "use client";
-import { FaFacebook, FaInstagram, FaGithub  } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
 import { FaSearch } from "react-icons/fa"; //https://react-icons.github.io/react-icons
 import NavigationContainer from "@/components/ui/pagenavigation/NavigationContainer";
