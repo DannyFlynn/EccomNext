@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { IoPerson } from "react-icons/io5";
 import { FaHeart, FaShoppingBasket } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 import { ImCross } from "react-icons/im";
+import NavLinks from "./pagenavigation/NavLinks";
 
 
 type NavigationProps = {
@@ -12,12 +12,13 @@ type NavigationProps = {
 
 const Navigation = ({ menuOpen, toggleMenu }: NavigationProps) => {
   return (
-    <nav className="w-full h-20 bg-indigo-200 lg:h-[15vh] flex border-b relative">
+    <nav className="w-full h-20 bg-indigo-200 lg:h-[15vh] flex  relative">
       <div className="hidden lg:block w-1/4  p-3">
         <div className="hidden lg:w-2/3 lg:flex justify-around text-2xl">
-          <Link href="/" >Woman</Link>
-          <Link href="/home" className="ml-3">Men</Link>
-          <Link href="/home" className="ml-3">Kids</Link>
+        <NavLinks />
+          {/* <Link href="/" >Beauty</Link>
+          <Link href="/" className="ml-3">Fragrances</Link>
+          <Link href="/" className="ml-3">Furniture</Link> */}
         </div>
       </div>
       <div className="w-1/4 lg:w-2/4  p-3 text-white lg:flex items-center justify-center">

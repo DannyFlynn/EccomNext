@@ -25,7 +25,7 @@ const FirstPageProducts = () => {
       .then((data) => {
         console.log(data);
         setItems(data.products);
-        setLoading(false); // Set loading to false once data is fetched
+        setLoading(false); 
       });
   }, []);
 
@@ -47,7 +47,7 @@ const FirstPageProducts = () => {
       {items.map((item, index) => (
         <Card
           key={item.id}
-          className="w-[90%] sm:w-1/4 lg:w-1/4 lg:h-64 cursor-pointer my-8 lg:my-0"
+          className="sm:w-1/4  lg:h-64 cursor-pointer my-8 lg:my-0"
           onMouseEnter={() => enlargeText(item.id)}
           onMouseLeave={() => enlargeText(item.id)}
         >
