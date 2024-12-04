@@ -5,20 +5,23 @@ import { useState, useEffect } from "react";
 type Category = {
   category?: string;
   changeCategory?: (cat: string) => void;
+  closeMenu? : () => void;
 }
 
 
 
 
 
-const NavLinks = ({category, changeCategory}: Category) => {
+const NavLinks = ({category, changeCategory, closeMenu}: Category) => {
   const [links, setLinks] = useState([{id:1, link: 'products', displayText: 'Products', underline: false}, {id:2, link: 'beauty', displayText: 'Beauty', underline: false}, {id:3, link: 'fragrances', displayText: 'Fragrances', underline: false}, {id: 4, link:'furniture', displayText: 'Furniture', underline: false}]);
 
 
 
   useEffect(() => {
     const value = localStorage.getItem("link");
-  
+    if(closeMenu){
+      closeMenu()
+    }
     if (value) {
       console.log("yes nav line")
       const changeCategoryLink = [...links]
@@ -32,6 +35,7 @@ const NavLinks = ({category, changeCategory}: Category) => {
     } else {
       console.log("no nav line")
     }
+    
 
   }, [category])
 
@@ -43,6 +47,7 @@ const NavLinks = ({category, changeCategory}: Category) => {
       localStorage.setItem("link", link)
       window.location.href = "/category"
     }
+    
   }
 
  

@@ -32,10 +32,14 @@ const NavigationContainer = ({category, changeCategory}: category) => {
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  }
+
   return (
     <>
       <Navigation menuOpen={menuOpen} toggleMenu={toggleMenu} category={category} changeCategory={changeCategory} />
-      <MobileNavMenu menuOpen={menuOpen} category={category} changeCategory={changeCategory} />
+      <MobileNavMenu menuOpen={menuOpen} category={category} changeCategory={changeCategory} closeMenu={closeMenu}  />
     </>
   );
 };
