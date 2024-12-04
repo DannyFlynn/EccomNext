@@ -19,7 +19,7 @@ const Page = () => {
 
   return (
     <div className="w-full overflow-x-hidden relative text-white text-shadow">
-      <NavigationContainer category={category} changeCategory={changeCategory}  />
+      <NavigationContainer  changeCategory={changeCategory}  />
       <div className="w-full lg:min-h-[80vh] flex flex-col justify-center relative">
         <ProductsContainer>
           <Categorys category={category}  />
