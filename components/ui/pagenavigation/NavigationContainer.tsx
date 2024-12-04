@@ -1,10 +1,16 @@
 "use client";
 
+type category = {
+  category: string;
+  changeCategory: (cat: string) => void;
+}
+
+
 import { useState, useEffect } from "react";
 import MobileNavMenu from "../MobileNavMenu";
 import Navigation from "../Navigation";
 
-const NavigationContainer = () => {
+const NavigationContainer = ({category, changeCategory}: category) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -28,8 +34,8 @@ const NavigationContainer = () => {
 
   return (
     <>
-      <Navigation menuOpen={menuOpen} toggleMenu={toggleMenu} />
-      <MobileNavMenu menuOpen={menuOpen} />
+      <Navigation menuOpen={menuOpen} toggleMenu={toggleMenu} category={category} changeCategory={changeCategory} />
+      <MobileNavMenu menuOpen={menuOpen} category={category} changeCategory={changeCategory} />
     </>
   );
 };

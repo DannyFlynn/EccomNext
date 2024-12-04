@@ -13,7 +13,11 @@ type Item = {
   brand: string;
 }[];
 
-const FirstPageProducts = () => {
+type Category = {
+  category: string;
+}
+
+const FirstPageProducts = ({category} : Category) => {
   const [items, setItems] = useState<Item>([]);
   const [bigText, setBigText] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);

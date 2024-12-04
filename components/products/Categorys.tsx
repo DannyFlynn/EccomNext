@@ -12,22 +12,47 @@ type Item = {
   brand: string;
 }[];
 
-const Categorys = () => {
+type category = {
+  category: string;
+  
+};
+
+const Categorys = ({ category }: category) => {
   const [items, setItems] = useState<Item>([]);
   const [bigText, setBigText] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
+ 
 
-  const cardColors = ["bg-red-200", "bg-gray-300", "bg-indigo-200", "bg-gray-300", "bg-indigo-200", "bg-red-200","bg-indigo-200", "bg-red-200", "bg-gray-300" ];
+  const cardColors = [
+    "bg-red-200",
+    "bg-gray-300",
+    "bg-indigo-200",
+    "bg-gray-300",
+    "bg-indigo-200",
+    "bg-red-200",
+    "bg-indigo-200",
+    "bg-red-200",
+    "bg-gray-300",
+  ];
 
   useEffect(() => {
-    fetch("https://dummyjson.com/products/category/fragrances")
+    const value = localStorage.getItem("link");
+
+    if (value) {
+      fetch(`https://dummyjson.com/products/category/${value}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setItems(data.products);
         setLoading(false);
       });
-  }, []);
+      console.log("Retrieved link:", value);
+    } else {
+      window.location.href = "/";
+    }
+
+
+  }, [category]);
 
   const enlargeText = (id: number) => {
     if (id === bigText) {

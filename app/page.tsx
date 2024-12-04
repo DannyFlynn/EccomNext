@@ -1,4 +1,3 @@
-"use client";
 import { Input } from "@/components/ui/input";
 import { FaSearch } from "react-icons/fa"; //https://react-icons.github.io/react-icons
 import NavigationContainer from "@/components/ui/pagenavigation/NavigationContainer";
@@ -14,11 +13,12 @@ export default function Home() {
   //https://dummyjson.com/products/category/beauty
   //https://dummyjson.com/products?limit=3
  
+  
 
   return (
-    <div className="w-full  overflow-x-hidden relative text-white text-shadow">
+    <div className="w-full  overflow-x-hidden relative text-white text-shadow border-indigo-200">
       <div className="w-full h-full flex flex-col items-center">
-        <NavigationContainer />
+        <NavigationContainer category={"beauty"}  />
         <div className="w-full lg:h-[80vh] flex flex-col justify-center relative">
           <div className="hidden lg:flex absolute top-0 z-10 w-full   p-3  justify-center lg:justify-end">
             <div className="w-4/5 sm:w-2/4 lg:w-2/6 2xl:w-1/5 relative mt-8 text-black">
@@ -47,7 +47,7 @@ export default function Home() {
             </div>
           </div>
           <ProductsContainer>
-            <FirstPageProuducts />
+            <FirstPageProuducts category={"beauty"} />
           </ProductsContainer>
         </div>
       </div>
