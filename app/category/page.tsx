@@ -7,7 +7,7 @@ import NavigationContainer from "@/components/ui/pagenavigation/NavigationContai
 
 
 
-const page = () => {
+const Page = () => {
 
   const [category, setCategory] = useState('');
 
@@ -30,4 +30,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

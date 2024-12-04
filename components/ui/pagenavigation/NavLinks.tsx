@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 type Category = {
-  category: string;
+  category?: string;
   changeCategory?: (cat: string) => void;
 }
 
@@ -14,26 +14,11 @@ type Category = {
 const NavLinks = ({category, changeCategory}: Category) => {
   const [links, setLinks] = useState([{id:1, link: 'products', displayText: 'Products', underline: false}, {id:2, link: 'beauty', displayText: 'Beauty', underline: false}, {id:3, link: 'fragrances', displayText: 'Fragrances', underline: false}, {id: 4, link:'furniture', displayText: 'Furniture', underline: false}]);
 
-  // const linkChange = (id: number, link: string) => {
-
-  //   const changeCategoryLink = [...links]
-
-  //   setLinks(changeCategoryLink.map(link => {
-  //       if(link.id === id){
-  //           return {...link, underline: true}
-  //       } else {
-  //           return {...link, underline: false}
-  //       }
-  //   }))
- 
-  // }
 
 
   useEffect(() => {
     const value = localStorage.getItem("link");
-    if(window.location.href === "/"){
-      localStorage.removeItem("link");
-    }
+  
     if (value) {
       console.log("yes nav line")
       const changeCategoryLink = [...links]

@@ -2,7 +2,7 @@
 
 type category = {
   category: string;
-  changeCategory: (cat: string) => void;
+  changeCategory?: (cat: string) => void;
 }
 
 
