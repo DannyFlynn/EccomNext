@@ -9,17 +9,17 @@ import NavLinks from "./pagenavigation/NavLinks";
 type NavigationProps = {
   menuOpen: boolean;
   toggleMenu: () => void;
+  category?: string;
   changeCategory?: (cat: string) => void;
 };
 
 
-
-const Navigation = ({ menuOpen, toggleMenu,  changeCategory }: NavigationProps) => {
+const Navigation = ({ menuOpen, toggleMenu, category, changeCategory }: NavigationProps) => {
   return (
     <nav className="w-full h-20 bg-indigo-200 lg:h-[15vh] flex  relative">
       <div className="hidden lg:block w-1/4  p-3">
         <div className="hidden lg:w-2/3 lg:flex justify-around text-2xl">
-        <NavLinks changeCategory={changeCategory}/>
+        <NavLinks category={category} changeCategory={changeCategory}/>
         </div>
       </div>
       <div className="w-1/4 lg:w-2/4  p-3 text-white lg:flex items-center justify-center">

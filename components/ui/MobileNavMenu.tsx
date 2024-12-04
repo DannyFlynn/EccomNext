@@ -2,7 +2,7 @@ import NavLinks from "./pagenavigation/NavLinks";
 
 type MobileNavMenuProps = {
   menuOpen: boolean;
-  category: string;
+  category?: string;
   changeCategory?: (cat: string) => void;
 };
 
